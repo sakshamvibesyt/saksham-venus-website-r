@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090711">
+  <meta name="description" content="Saksham Venus — digital creator exploring Telegram bots, technology, gaming and creative online projects.">
+  <meta property="og:title" content="Saksham Venus | Creator & Projects">
+  <meta property="og:description" content="Explore my digital projects, Telegram bots and online presence.">
+  <title>Saksham Venus | Creator & Projects</title>
+  <style>
+    :root{--bg:#090711;--panel:#120e20;--panel2:#171129;--purple:#a855f7;--pink:#e879f9;--text:#f8f5ff;--muted:#b8afcc;--line:rgba(192,132,252,.22);--glow:0 0 34px rgba(168,85,247,.18)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:86px}
+    body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(126,34,206,.19),transparent 35%),radial-gradient(ellipse at 0% 45%,rgba(88,28,135,.13),transparent 32%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1100px,calc(100% - 36px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(9,7,17,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(192,132,252,.13)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:850;letter-spacing:.2px;font-size:1.06rem}.brand span{color:var(--pink)}
+    .links{display:flex;gap:24px;align-items:center;color:var(--muted);font-size:.93rem}
+    .links a:hover{color:#fff}
+    .menu{display:none;background:none;border:1px solid var(--line);border-radius:10px;color:#fff;padding:8px 11px;font-size:1rem}
+    .hero{padding:88px 0 72px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:48px;min-height:570px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:#e9d5ff;background:rgba(168,85,247,.08);font-size:.83rem}
+    .dot{width:7px;height:7px;background:#c084fc;border-radius:50%;box-shadow:0 0 12px #c084fc}
+    h1{font-size:clamp(2.8rem,6vw,5.2rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 18px}
+    .gradient{background:linear-gradient(100deg,#fff 5%,#d8b4fe 47%,#e879f9 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:1.08rem;max-width:610px;color:var(--muted);margin:0 0 28px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:12px;border:1px solid var(--line);font-weight:700;font-size:.94rem;transition:transform .2s,border-color .2s}
+    .btn:hover{transform:translateY(-2px);border-color:rgba(232,121,249,.65)}
+    .primary{background:linear-gradient(110deg,#7e22ce,#a855f7 60%,#c026d3);border:0;box-shadow:0 8px 30px rgba(168,85,247,.24)}
+    .secondary{background:rgba(255,255,255,.025)}
+    .social-proof{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;color:#9e94b6;font-size:.83rem}
+    .social-proof span{padding:5px 10px;border:1px solid rgba(192,132,252,.12);border-radius:999px}
+    .profile-stage{display:grid;place-items:center;position:relative;min-height:350px}
+    .orb{position:absolute;width:310px;height:310px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.22),rgba(168,85,247,.04) 57%,transparent 70%);filter:blur(5px)}
+    .profile-ring{width:250px;height:250px;border-radius:50%;padding:7px;background:linear-gradient(140deg,#e879f9,#7e22ce,#312e81);box-shadow:0 0 65px rgba(168,85,247,.28);position:relative}
+    .profile-inner{width:100%;height:100%;border-radius:50%;overflow:hidden;display:grid;place-items:center;background:linear-gradient(145deg,#201336,#0b0914);border:4px solid #100b1b}
+    .profile-inner img{width:100%;height:100%;object-fit:cover;display:none}
+    .initials{font-size:4.2rem;font-weight:900;letter-spacing:-.08em;color:#e9d5ff;text-shadow:0 0 30px rgba(216,180,254,.4)}
+    .float-card{position:absolute;background:rgba(20,14,34,.9);border:1px solid var(--line);padding:11px 14px;border-radius:13px;box-shadow:var(--glow);font-size:.86rem;color:#e9ddff}
+    .float-card strong{display:block;color:white;font-size:.9rem}
+    .fc1{top:45px;right:0}.fc2{bottom:42px;left:0}
+    section{padding:70px 0}
+    .section-head{margin-bottom:28px;max-width:690px}
+    .kicker{color:#d8b4fe;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:800}
+    h2{font-size:clamp(1.9rem,4vw,2.8rem);letter-spacing:-.04em;line-height:1.15;margin:9px 0 12px}
+    .section-head p,.about-copy{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{padding:22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(25,18,43,.92),rgba(15,11,25,.92));box-shadow:0 12px 40px rgba(0,0,0,.12);transition:transform .2s,border-color .2s}
+    .card:hover{transform:translateY(-4px);border-color:rgba(216,180,254,.5)}
+    .iconbox{width:46px;height:46px;display:grid;place-items:center;border-radius:13px;background:rgba(168,85,247,.13);border:1px solid var(--line);font-size:1.35rem;margin-bottom:17px}
+    h3{font-size:1.12rem;margin:0 0 8px}
+    .card p{color:var(--muted);font-size:.93rem;margin:0 0 17px}
+    .tag{display:inline-block;font-size:.75rem;color:#e9d5ff;border:1px solid rgba(192,132,252,.2);background:rgba(168,85,247,.07);border-radius:999px;padding:4px 9px;margin:0 5px 5px 0}
+    .card-link{display:inline-flex;margin-top:15px;color:#e9d5ff;font-weight:750;font-size:.9rem}
+    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px;align-items:start}
+    .about-panel{padding:25px;border-radius:18px;background:linear-gradient(140deg,rgba(168,85,247,.12),rgba(18,14,32,.8));border:1px solid var(--line)}
+    .about-panel .big{font-size:2rem;font-weight:900;letter-spacing:-.05em}
+    .about-panel p{color:var(--muted);margin:6px 0 0}
+    .about-copy p{margin:0 0 14px}
+    .contact{border:1px solid var(--line);background:radial-gradient(ellipse at 100% 0%,rgba(168,85,247,.18),transparent 55%),var(--panel);border-radius:24px;padding:34px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .contact p{color:var(--muted);margin:0;max-width:600px}
+    footer{padding:28px 0 38px;color:#8f86a7;font-size:.85rem}
+    .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid rgba(192,132,252,.13);padding-top:22px}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;gap:22px;padding:65px 0 45px;min-height:auto}.hero-copy{text-align:center}.hero-copy .lead{margin-left:auto;margin-right:auto}.actions,.social-proof{justify-content:center}.profile-stage{min-height:315px;order:-1}.profile-ring{width:210px;height:210px}.orb{width:270px;height:270px}.fc1{right:4%;top:28px}.fc2{left:4%;bottom:24px}.grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1100px)}.nav{min-height:64px}.menu{display:block}.links{display:none;position:absolute;top:63px;left:0;right:0;padding:18px 22px 22px;background:#0d0918;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:15px}.links.open{display:flex}.hero{padding-top:38px}.profile-stage{min-height:270px}.profile-ring{width:180px;height:180px}.initials{font-size:3.2rem}.fc1{top:18px;right:0}.fc2{bottom:13px;left:0}.float-card{font-size:.76rem;padding:8px 10px}section{padding:52px 0}.grid{grid-template-columns:1fr}.card{padding:20px}.contact{padding:24px}.contact .actions{justify-content:flex-start}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">SAKSHAM <span>VENUS</span></a>
+    <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="links" id="navLinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#connect">Connect</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap hero" id="home">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="dot"></span> CREATOR • TECH • DIGITAL PROJECTS</div>
+      <h1>Hey, I'm<br><span class="gradient">Saksham Venus.</span></h1>
+      <p class="lead">I explore technology, build digital projects, and create experiences around Telegram communities, bots and gaming.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">✦ Explore my projects</a>
+        <a class="btn secondary" href="https://t.me/Sakshamvenus" target="_blank" rel="noopener noreferrer">↗ Connect on Telegram</a>
+      </div>
+      <div class="social-proof"><span>⌘ Digital projects</span><span>◈ Telegram bots</span><span>🎮 Gaming</span></div>
+    </div>
+    <div class="profile-stage" aria-label="Profile photo placeholder">
+      <div class="orb"></div>
+      <div class="profile-ring"><div class="profile-inner">
+        <img id="profilePhoto" src="profile.jpg" alt="Saksham Venus profile photo">
+        <div class="initials" id="initials">SV</div>
+      </div></div>
+      <div class="float-card fc1"><strong>✦ Creator</strong>Building my digital identity</div>
+      <div class="float-card fc2"><strong>⌘ Project mode</strong>Learn • Build • Improve</div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="about-panel">
+        <div class="kicker">A little about me</div>
+        <div class="big">Curious by nature.<br><span class="gradient">Digital by passion.</span></div>
+        <p>This is my official corner of the internet.</p>
+      </div>
+      <div class="about-copy">
+        <h2>Turning ideas into projects.</h2>
+        <p>I'm Saksham Venus. I enjoy learning about technology, working on Telegram bot projects, exploring gaming communities and creating useful digital experiences.</p>
+        <p>This website brings my projects and official social links together in one place. I'll keep updating it as I build and learn more.</p>
+        <div><span class="tag">Technology</span><span class="tag">Telegram</span><span class="tag">Bot projects</span><span class="tag">Gaming</span><span class="tag">Creator journey</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Selected work</div>
+        <h2>Projects I'm working on <span class="gradient">✦</span></h2>
+        <p>A few digital projects and experiments. Some may still be in development.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="iconbox">🎵</div><h3>SEM Phantom</h3>
+          <p>A Telegram userbot and music-bot project exploring voice-chat tools and bot features.</p>
+          <span class="tag">Telegram</span><span class="tag">Bot project</span>
+          <a class="card-link" href="https://github.com/sakshamvibesyt/SEM-Phantom" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+        </article>
+        <article class="card">
+          <div class="iconbox">🎧</div><h3>KanhaMusic</h3>
+          <p>A music-bot project focused on Telegram voice-chat playback and music features.</p>
+          <span class="tag">Music bot</span><span class="tag">Open source</span>
+          <a class="card-link" href="https://github.com/sakshamvibesyt/KanhaMusic" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+        </article>
+        <article class="card">
+          <div class="iconbox">🎨</div><h3>SEM Colours</h3>
+          <p>A web-app experiment with a dark interface, activity screens and virtual-coin concepts.</p>
+          <span class="tag">Web app</span><span class="tag">Experiment</span>
+          <a class="card-link" href="https://github.com/sakshamvibesyt/-sem-colours" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+        </article>
+        <article class="card">
+          <div class="iconbox">⛏️</div><h3>SEM Minecraft AFK Bot</h3>
+          <p>An experiment in connecting a Minecraft bot with Telegram controls and a web health endpoint.</p>
+          <span class="tag">Minecraft</span><span class="tag">Node.js</span>
+          <a class="card-link" href="https://github.com/sakshamvibesyt/Sem-minecraft-afk-bot" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+        </article>
+        <article class="card">
+          <div class="iconbox">⚙️</div><h3>More experiments</h3>
+          <p>Explore my public repositories to see more code, ideas and ongoing experiments.</p>
+          <span class="tag">Learning</span><span class="tag">Development</span>
+          <a class="card-link" href="https://github.com/sakshamvibesyt" target="_blank" rel="noopener noreferrer">All GitHub projects ↗</a>
+        </article>
+        <article class="card">
+          <div class="iconbox">💬</div><h3>Telegram community</h3>
+          <p>Follow my Telegram profile for updates and to get in touch about my projects.</p>
+          <span class="tag">Community</span><span class="tag">Updates</span>
+          <a class="card-link" href="https://t.me/Sakshamvenus" target="_blank" rel="noopener noreferrer">Open Telegram ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="connect">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <div class="kicker">Let's connect</div>
+          <h2>Find me around the internet.</h2>
+          <p>For project updates, creator content or a friendly hello, use one of my official links below.</p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://t.me/Sakshamvenus" target="_blank" rel="noopener noreferrer">✈ Telegram</a>
+          <a class="btn secondary" href="https://www.instagram.com/pvttsem/" target="_blank" rel="noopener noreferrer">◎ Instagram</a>
+          <a class="btn secondary" href="https://github.com/sakshamvibesyt" target="_blank" rel="noopener noreferrer">⌘ GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Saksham Venus. Made with purpose.</span><a href="#home">Back to top ↑</a></div></footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn');
+  const navLinks=document.getElementById('navLinks');
+  menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰';});
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const photo=document.getElementById('profilePhoto'), initials=document.getElementById('initials');
+  photo.addEventListener('load',()=>{photo.style.display='block';initials.style.display='none';});
+  photo.addEventListener('error',()=>{photo.style.display='none';initials.style.display='block';});
+</script>
+</body>
+</html>
